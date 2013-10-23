@@ -69,7 +69,7 @@ GOTO :EOF
 	SET CM=%M%
 	SET CY=%Y%
 
-	FOR /F %%I IN ('DIR "%LOGS%\*.txt" /B') DO (
+	FOR /F %%I IN ('DIR "%LOGS%\*.txt" /B 2^>NUL') DO (
 		SET	"FILENAME=%LOGS%\%%I"
 		
 		CALL :DMY %%I
